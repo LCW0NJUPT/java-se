@@ -1,0 +1,27 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface Weapon{
+    void kill();
+    String getName();
+    int getType();
+}
+
+class Transformer{
+    Weapon w;
+    void attack();
+
+}
+
+class Sword{
+}
+
+
+Transformer o-- Weapon
+
+Weapon <|... Sword
+Weapon <|... AK47
+Weapon <|... Lyb
+
+
+@enduml

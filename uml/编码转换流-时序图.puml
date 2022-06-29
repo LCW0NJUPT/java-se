@@ -1,0 +1,21 @@
+@startuml
+'https://plantuml.com/sequence-diagram
+
+autonumber
+
+Test -> OutputStreamWriter: write()输出字符
+activate OutputStreamWriter
+
+OutputStreamWriter -> FileOutputStream:write()
+activate FileOutputStream
+
+FileOutputStream -> f3.dat:向文件写入数据
+OutputStreamWriter <- FileOutputStream:完成返回
+
+deactivate FileOutputStream
+
+Test<-OutputStreamWriter:完成返回
+deactivate OutputStreamWriter
+
+
+@enduml

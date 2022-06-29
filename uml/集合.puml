@@ -1,0 +1,37 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+interface Collection{}
+interface List{}
+interface Set {}
+
+interface Map {}
+
+class ArrayList {}
+class LinkedList {}
+
+class HashSet {}
+class TreeSet {}
+
+class HashMap {}
+class TreeMap {}
+
+'迭代器
+interface Iterator {
+    + hasNext();
+    + next();
+}
+'工具方法
+class Collections {}
+
+
+Collection <|-- List
+Collection <|-- Set
+List <|.. ArrayList
+List <|.. LinkedList
+Set <|.. HashSet
+Set <|.. TreeSet
+Map <|.. HashMap
+Map <|.. TreeMap
+
+@enduml

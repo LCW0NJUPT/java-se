@@ -1,0 +1,44 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+'abstract class AbstractList
+'abstract AbstractCollection
+'interface List
+'interface Collection
+'
+'List <|-- AbstractList
+'Collection <|-- AbstractCollection
+'
+'Collection <|- List
+'AbstractCollection <|- AbstractList
+'AbstractList <|-- ArrayList
+
+'class ArrayList {
+'Object[] elementData
+'size()
+'}
+
+interface test{
+
+}
+
+Student--|>  test
+test <|-- TimeUnit
+
+class Student {
+	int id;
+	String name;
+	String gender;
+	int age;
+
+	void print()
+}
+
+
+enum TimeUnit {
+DAYS
+HOURS
+MINUTES
+}
+
+@enduml
